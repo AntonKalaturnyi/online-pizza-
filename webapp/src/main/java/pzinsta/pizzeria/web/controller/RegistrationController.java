@@ -76,9 +76,9 @@ public class RegistrationController {
     private CustomerRegistrationDTO convertRegistrationFormToRegistrationDTO(CustomerRegistrationForm customerRegistrationForm) {
         CustomerRegistrationDTO customerRegistrationDTO = new CustomerRegistrationDTO();
         customerRegistrationDTO.setUsername(customerRegistrationForm.getUsername());
-//encode        customerRegistrationDTO.setPassword(passwordEncoder.encode(customerRegistrationForm.getPassword()));
+        customerRegistrationDTO.setPassword(passwordEncoder.encode(customerRegistrationForm.getPassword()));
 
-        customerRegistrationDTO.setPassword(customerRegistrationForm.getPassword());
+//encode        customerRegistrationDTO.setPassword(customerRegistrationForm.getPassword());
 
         customerRegistrationDTO.setFirstName(customerRegistrationForm.getFirstName());
         customerRegistrationDTO.setLastName(customerRegistrationForm.getLastName());
