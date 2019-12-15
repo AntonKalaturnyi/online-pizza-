@@ -2,6 +2,7 @@ package pzinsta.pizzeria.web.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,6 +26,7 @@ import javax.validation.Valid;
 
 @Controller
 @RequestMapping("/account/register")
+@PropertySource("classpath:application.properties")
 public class RegistrationController {
 
     private CustomerRegistrationService customerRegistrationService;
