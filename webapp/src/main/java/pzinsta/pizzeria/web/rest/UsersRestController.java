@@ -62,8 +62,8 @@ public class UsersRestController {
     @ResponseStatus(HttpStatus.CREATED)
     public UserDTO addUser(@RequestBody UserAndAccountDTO userAndAccountDTO) {
         Optional.ofNullable(userAndAccountDTO.getAccountDTO())
-//encoder                .ifPresent(accountDTO -> accountDTO.setPassword(passwordEncoder.encode(accountDTO.getPassword())));
-                .ifPresent(accountDTO -> accountDTO.setPassword(accountDTO.getPassword()));
+                .ifPresent(accountDTO -> accountDTO.setPassword(passwordEncoder.encode(accountDTO.getPassword())));
+//encoder                .ifPresent(accountDTO -> accountDTO.setPassword(accountDTO.getPassword()));
 
         return userService.addUser(userAndAccountDTO.getUserDTO(), userAndAccountDTO.getAccountDTO());
     }

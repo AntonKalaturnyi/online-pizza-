@@ -58,8 +58,8 @@ public class AccountRestController {
 
     @PatchMapping("/{id}/password")
     public void updatePassword(@PathVariable("id") Long id, @RequestBody String password) {
-   //encoder     accountService.updatePassword(id, passwordEncoder.encode(password));
-        accountService.updatePassword(id, password);
+        accountService.updatePassword(id, passwordEncoder.encode(password));
+        //encoder   accountService.updatePassword(id, password);
 
     }
 
