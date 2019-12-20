@@ -7,7 +7,7 @@
 <html>
     <head>
         <%@ include file="fragments/head.jspf" %>
-        <title>Pizzeria</title>
+        <title>GrowIt</title>
     </head>
     <body>
         <div class="container">
